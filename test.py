@@ -1,7 +1,10 @@
 import redis
 import os
 
-r = redis.StrictRedis(host=os.getenv("WERCKER_REDIS_HOST"), port=6379, db=0)
+host = os.getenv("WERCKER_REDIS_HOST")
+port = os.getenv("WERCKER_REDIS_PORT")
+
+r = redis.StrictRedis(host=, port=port, db=0)
 print r.info()
 
 r.set('foo', 'bar')
