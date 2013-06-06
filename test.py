@@ -2,7 +2,7 @@ import redis
 import os
 
 host = os.getenv("WERCKER_REDIS_HOST")
-port = os.getenv("WERCKER_REDIS_PORT")
+port = int(os.getenv("WERCKER_REDIS_PORT"))
 
 r = redis.StrictRedis(host=host, port=port, db=0)
 print r.info()
