@@ -5,5 +5,5 @@ build:
   steps:
     - pip-install
     - script:
-      name: assert
-      code: python test.py
+        name: assert
+        code: python test.py
